@@ -2,7 +2,7 @@
 # Make all of the projects in the subdirectories
 #
 
-SUBDIRS = SetupGPIO/ Method1/ Method2/ Method3/ Method4/ 
+SUBDIRS = SetupGPIO/ Method1/ Method2/ Method3/ Method4/ Method5/ Method6/
 all: $(SUBDIRS)
 
 $(SUBDIRS):
