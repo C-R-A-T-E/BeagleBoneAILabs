@@ -41,7 +41,9 @@ int main(int argc, char* argv[])
 
         printf("gpio76 device doesn't exist, using export to create\n");
         
+	fseek(exportFilehandle, 0, SEEK_SET);
         fprintf(exportFilehandle, "%d", k_gpioNum76);
+	fflush(exportFilehandle);
     
         //  Check again, we should now have the gpio directory we need.
 
@@ -112,6 +114,7 @@ int main(int argc, char* argv[])
         
 	fseek(exportFilehandle, 0, SEEK_SET);
         fprintf(exportFilehandle, "%d", k_gpioNum121);
+	fflush(exportFilehandle);
     
         //  Check again, we should now have the gpio directory we need.
 
