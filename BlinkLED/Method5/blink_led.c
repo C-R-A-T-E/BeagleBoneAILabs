@@ -24,7 +24,7 @@ static const uint32_t k_gpioPin25 = (0x1 << 25);
 static const uint32_t k_ctrlCorePadAddr = 0x4A002000;
 static const uint32_t k_ctrlCorePadSize = 0x1888;;
 
-static const uint32_t k_gpio4_24Offset = 0x15AC / 4;
+static const uint32_t k_vin2a_d17_offset = 0x15AC / 4;
 
 static const uint32_t k_mode14 = 0x000E;
 
@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
         PROT_WRITE, MAP_SHARED, 
         memoryhandle, k_ctrlCorePadAddr);
 
-    ctrlCorePadGpio4_24 = ctrlCorePad + k_gpio4_24Offset;
+    ctrlCorePadGpio4_24 = ctrlCorePad + k_vin2a_d17_offset;
 
     if (ctrlCorePad == MAP_FAILED)
     {
